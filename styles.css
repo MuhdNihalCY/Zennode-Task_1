@@ -13,7 +13,6 @@ p {
 }
 
 header {
-    width: 100%;
     height: 5rem;
     display: flex;
     justify-content: start;
@@ -22,8 +21,8 @@ header {
     background-color: #070c11;
 }
 
-.HeaderSub {
-    width: 80%;
+.headerSub {
+    width: 100%;
     height: 5rem;
     display: flex;
     justify-content: space-around;
@@ -205,6 +204,9 @@ input [type="checkbox"] {
     margin-left: 2rem;
 }
 
+
+/* Quote generation Starts */
+
 .quoteGeneratorSection {
     margin-top: 3rem;
     width: 100%;
@@ -232,11 +234,11 @@ input [type="checkbox"] {
 
 .quoteTextArea p {
     color: whitesmoke;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .quoteTextArea p:last-child {
-    font-size: .5rem;
+    font-size: 1rem;
     text-align: end;
     margin-left: 10rem;
 }

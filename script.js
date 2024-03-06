@@ -19,7 +19,7 @@ function addTaskToList(task) {
 $(document).ready(() => {
     // jQuery for add new task button click 
     $("#addTaskBtn").click(() => {
-        let task = document.getElementById('newTaskInp').value.trim();
+        const task = document.getElementById('newTaskInp').value.trim();
 
         if (task !== "") {
             // function called to store the task
@@ -49,7 +49,9 @@ $(document).ready(() => {
                 $("#quoteContent").text(`" ${data[0].content}"`);
                 $("#quoteAuthor").text(`~ ${data[0].author}`);
             }
-        })
+        }).fail((error) => {
+            console.error('Error fetching quote:', error);
+        });
     })
 
 })
