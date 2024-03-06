@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 1</title>
     <link rel="stylesheet" href="style.css">
 
-</head>
-<body>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <script src="script.js" ></script>
+</head>
+
+<body>
+    <header>
+        <div class="title">To-do List</div>
+        <nav>
+            <a href="/index.html">To-do list</a>
+            <a href="/quote_generator.html">Quote generator</a>
+        </nav>
+    </header>
+    <section class="task-section">
+        <div class="new-task">
+            <input type="text" id="new-task-inp">
+            <input type="button" id="add-task-btn" value="Add task">
+        </div>
+        <div class="task-list-div">
+            <ul id="task-list-parent">
+               
+            </ul>
+        </div>
+    </section>  
+
+    <script src="script.js"></script>
 </body>
+
 </html>

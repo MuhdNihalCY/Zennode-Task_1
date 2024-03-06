@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #0c151e;
+    min-height: 100vh;
+}
+
+ol,
+p {
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #070c11;
+}
+
+.title {
+    color: rgb(197, 202, 222);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: rgb(173, 204, 232);
+}
+
+.task-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.new-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#new-task-inp {
+    padding: .5rem;
+    background: none;
+    border-radius: 1rem;
+    outline: none;
+    border: 1px solid gray;
+    width: 25%;
+    font-size: 2rem;
+    color: whitesmoke;
+    margin-right: 2rem;
+}
+
+#add-task-btn {
+    padding: .5rem 1rem;
+    background: rgb(113, 113, 113);
+    border-radius: 1rem;
+    border: 2px solid gray;
+    font-size: 18px;
+    font-weight: 600;
+    color: whitesmoke;
+    transition: background .1s, color .1s, font-weight .5s;
+}
+
+#add-task-btn:hover {
+    background: rgb(174, 174, 174);
+    color: rgb(55, 55, 55);
+}
+
+.task-list-div {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.task-list {
+    display: flex;
+    gap: 2rem;
+    width: 35rem;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+input [type="checkbox"] {
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.task-list p{
+    color: #c5c5c5;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.done-btn {
+    background-color: blue;
+    color: white;
+    font-size: 20;
+    font-weight: 500;
+    padding: .5rem;
+}
+
+.done-btn-active {
+    background-color: rgb(68, 68, 68);
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    font-size: 20;
+    font-weight: 500;
+    padding: .5rem;
+}
