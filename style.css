@@ -16,9 +16,18 @@ header {
     width: 100%;
     height: 5rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
+    padding-left: 10%;
     align-items: center;
     background-color: #070c11;
+}
+
+.HeaderSub {
+    width: 80%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .title {
@@ -42,7 +51,7 @@ nav a:hover {
     color: rgb(173, 204, 232);
 }
 
-.task-section {
+.taskSection {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -50,14 +59,14 @@ nav a:hover {
     margin-top: 5rem;
 }
 
-.new-task {
+.newTask {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
 
-#new-task-inp {
+#newTaskInp {
     padding: .5rem;
     background: none;
     border-radius: 1rem;
@@ -69,7 +78,7 @@ nav a:hover {
     margin-right: 2rem;
 }
 
-#add-task-btn {
+#addTaskBtn {
     padding: .5rem 1rem;
     background: rgb(113, 113, 113);
     border-radius: 1rem;
@@ -80,19 +89,19 @@ nav a:hover {
     transition: background .1s, color .1s, font-weight .5s;
 }
 
-#add-task-btn:hover {
+#addTaskBtn:hover {
     background: rgb(174, 174, 174);
     color: rgb(55, 55, 55);
 }
 
-.task-list-div {
+.taskListDiv {
     margin-top: 5rem;
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.task-list {
+.taskList {
     display: flex;
     gap: 2rem;
     width: 35rem;
@@ -107,13 +116,13 @@ input [type="checkbox"] {
     background-color: #eee;
 }
 
-.task-list p{
+.taskList p {
     color: #c5c5c5;
     font-size: 20px;
     font-weight: 600;
 }
 
-.done-btn {
+.doneBtn {
     background-color: blue;
     color: white;
     font-size: 20;
@@ -121,14 +130,106 @@ input [type="checkbox"] {
     padding: .5rem;
 }
 
-.done-btn-active {
+.doneBtnActive {
     background-color: rgb(68, 68, 68);
 }
 
-.delete-btn {
+.deleteBtn {
     background-color: red;
     color: white;
     font-size: 20;
     font-weight: 500;
     padding: .5rem;
+}
+
+.menuContainer {
+    display: none;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.menuBar1,
+.menuBar2,
+.menuBar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.menuClose .menuBar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.menuClose .menuBar2 {
+    opacity: 0;
+}
+
+.menuClose .menuBar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+/* side nav */
+.sideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sideNav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sideNav a:hover {
+    color: #f1f1f1;
+}
+
+.sideNavActive {
+    width: 300px;
+}
+
+#menuCloseContainer {
+    margin-left: 2rem;
+}
+
+/* Responsive media query starts here */
+@media only screen and (max-width: 768px) {
+    header {
+        width: 90%;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .HeaderSub {
+        justify-content: start;
+    }
+
+    .menuContainer {
+        display: inline-block;
+    }
+
+    .newTask {
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+    #newTaskInp {
+        width: 80%;
+        margin: 0;
+    }
 }

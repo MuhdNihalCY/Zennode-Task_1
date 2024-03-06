@@ -1,9 +1,9 @@
 // initialised an empty list variable
-let list = [];
+const list = [];
 
 // store new task
 function addTaskToList(task) {
-    let newTask = {
+    const newTask = {
         task: task,
         Status: false // by default set the status to be not completed
     }
@@ -16,31 +16,44 @@ function addTaskToList(task) {
 }
 
 
-// jQuery for add new task button click 
-$("#add-task-btn").click(() => {
-    let task = document.getElementById('new-task-inp').value.trim();
+$(document).ready(() => {
+    // jQuery for add new task button click 
+    $("#addTaskBtn").click(() => {
+        let task = document.getElementById('newTaskInp').value.trim();
 
-    if (task !== "") {
-        // function called to store the task
-        addTaskToList(task)
+        if (task !== "") {
+            // function called to store the task
+            addTaskToList(task)
 
-        // cleared task input tag
-        document.getElementById('new-task-inp').value = "";
-    }
+            // cleared task input tag
+            document.getElementById('newTaskInp').value = "";
+        }
+    });
+
+    // side nav open
+    $("#menuBarContainer").click(() => {
+        $("#sideNav").toggleClass("sideNavActive");
+    });
+    
+    // side nav close
+    $("#menuCloseContainer").click(() => {
+        $("#sideNav").toggleClass("sideNavActive");
+    });
+
 })
 
 // function to add new task to to-do list
 function addNewList(newTask) {
-    var taskParent = document.getElementById('task-list-parent');
+    var taskParent = document.getElementById('taskListParent');
 
     // create a new li element
     let li = document.createElement('li');
-    li.classList.add('task-list');
+    li.classList.add('taskList');
 
     // create a new input checkbox element
     let doneBtn = document.createElement('button');
     doneBtn.textContent = "done";
-    doneBtn.classList.add('done-btn');
+    doneBtn.classList.add('doneBtn');
     // attach onclick event listener on it
     $(doneBtn).click(() => {
         taskDone(doneBtn.parentNode);
@@ -49,12 +62,12 @@ function addNewList(newTask) {
     // create a new p tag
     let taskTag = document.createElement('p');
     taskTag.textContent = newTask.task;
-    taskTag.classList.add('task-title');
+    taskTag.classList.add('taskTitle');
     newTask.Status ? taskTag.style.textDecoration = "line-through" : null;
 
     // create a new button element
     let delBtn = document.createElement('button');
-    delBtn.classList.add('delete-btn');
+    delBtn.classList.add('deleteBtn');
     delBtn.textContent = "delete";
     // attach onclick event listener on it
     $(delBtn).click(() => {
@@ -69,9 +82,9 @@ function addNewList(newTask) {
 }
 
 function taskDone(listTag) {
-    var taskTitleTag = listTag.querySelector('.task-title');
+    var taskTitleTag = listTag.querySelector('.taskTitle');
     let taskTitle = taskTitleTag.textContent;
-    let doneBtn = listTag.querySelector('.done-btn');
+    let doneBtn = listTag.querySelector('.doneBtn');
 
     let foundTask = list.find((eachList) => eachList.task === taskTitle);
 
@@ -81,11 +94,11 @@ function taskDone(listTag) {
     foundTask.Status = true;
     doneBtn.disabled = true; // done button for this task is  disabled 
     foundTask.Status = true; // updated the status of task
-    doneBtn.classList.add('done-btn-active'); // add active class for done button
+    doneBtn.classList.add('doneBtnActive'); // add active class for done button
 }
 
 function deleteTask(listTag) {
-    var taskTitleTag = listTag.querySelector('.task-title');
+    var taskTitleTag = listTag.querySelector('.taskTitle');
     let taskTitle = taskTitleTag.textContent;
 
     // remove the task from List

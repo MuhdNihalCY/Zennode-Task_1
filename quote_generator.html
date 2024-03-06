@@ -6,15 +6,51 @@
     <title>Task 1</title>
     <link rel="stylesheet" href="style.css">
 
+    <!-- jQuery import link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
 </head>
 <body>
     <header>
-        <div class="title">Quote Generator</div>
-        <nav>
-            <a href="/index.html" >Todo list</a>
-            <a href="/quote_generator.html">Quote generator</a>
-        </nav>
+        <!-- menu bar section -->
+        <div class="menuContainer" id="menuBarContainer">
+            <div class="menuBar1"></div>
+            <div class="menuBar2"></div>
+            <div class="menuBar3"></div>
+        </div>
+
+        <div class="HeaderSub">
+            <div class="title">Quote Generator</div>
+
+            <!-- nav bar section -->
+            <nav>
+                <a href="/index.html">To-do list</a>
+                <a href="/quote_generator.html">Quote generator</a>
+            </nav>
+
+        </div>
+
+
     </header>
+    <!-- side nav -->
+    <div id="sideNav" class="sideNav">
+        <!-- menu bar section -->
+        <div class="menuContainer menuClose" id="menuCloseContainer">
+            <div class="menuBar1"></div>
+            <div class="menuBar2"></div>
+            <div class="menuBar3"></div>
+        </div>
+        <a href="/index.html">To-do list</a>
+        <a href="/quote_generator.html">Quote generator</a>
+    </div>
+
+
+    <!-- Quote generator -->
+    <section>
+        <button id="generatorBtn">Generate quote!</button>
+        <p id="quoteContent"></p>
+    </section>
 
     <script src="script.js" ></script>
 </body>
