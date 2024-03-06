@@ -50,6 +50,71 @@ nav a:hover {
     color: rgb(173, 204, 232);
 }
 
+.menuContainer {
+    display: none;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.menuBar1,
+.menuBar2,
+.menuBar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* making menu button to close button */
+.menuClose .menuBar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.menuClose .menuBar2 {
+    opacity: 0;
+}
+
+/* making menu button to close button */
+.menuClose .menuBar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+/* side nav */
+.sideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sideNav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sideNav a:hover {
+    color: #f1f1f1;
+}
+
+.sideNavActive {
+    width: 300px;
+}
+
+#menuCloseContainer {
+    margin-left: 2rem;
+}
+
 .taskSection {
     width: 100%;
     display: flex;
@@ -141,72 +206,7 @@ input [type="checkbox"] {
     padding: .5rem;
 }
 
-.menuContainer {
-    display: none;
-    cursor: pointer;
-    margin-right: 2rem;
-}
-
-.menuBar1,
-.menuBar2,
-.menuBar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-.menuClose .menuBar1 {
-    transform: translate(0, 11px) rotate(-45deg);
-}
-
-.menuClose .menuBar2 {
-    opacity: 0;
-}
-
-.menuClose .menuBar3 {
-    transform: translate(0, -11px) rotate(45deg);
-}
-
-/* side nav */
-.sideNav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sideNav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sideNav a:hover {
-    color: #f1f1f1;
-}
-
-.sideNavActive {
-    width: 300px;
-}
-
-#menuCloseContainer {
-    margin-left: 2rem;
-}
-
-
 /* Quote generation Starts */
-
 .quoteGeneratorSection {
     margin-top: 3rem;
     width: 100%;
@@ -253,7 +253,7 @@ input [type="checkbox"] {
         display: none;
     }
 
-    .HeaderSub {
+    .headerSub {
         justify-content: start;
     }
 

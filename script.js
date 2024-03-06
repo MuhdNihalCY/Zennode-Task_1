@@ -40,7 +40,7 @@ $(document).ready(() => {
         $("#sideNav").toggleClass("sideNavActive");
     });
 
-    // quote generator Btn
+    // quote generator  using ajax get method, using a third party api for quote generation.
     $("#generatorBtn").click(() => {
         $.get("https://api.quotable.io/quotes/random", (data, status) => {
             // alert(status);
@@ -122,15 +122,7 @@ function deleteTask(listTag) {
         // Remove the element at the found index
         list.splice(taskIndex, 1);
     }
-    console.log(list);
 
     // Remove the parent <li> element from the DOM
     listTag.remove();
 }
-
-
-
-
-
-
-
