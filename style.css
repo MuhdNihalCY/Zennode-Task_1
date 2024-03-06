@@ -205,6 +205,42 @@ input [type="checkbox"] {
     margin-left: 2rem;
 }
 
+.quoteGeneratorSection {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+#generatorBtn {
+    max-width: 200px;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+}
+
+.quoteTextArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem;
+}
+
+.quoteTextArea p {
+    color: whitesmoke;
+    font-size: 1rem;
+}
+
+.quoteTextArea p:last-child {
+    font-size: .5rem;
+    text-align: end;
+    margin-left: 10rem;
+}
+
 /* Responsive media query starts here */
 @media only screen and (max-width: 768px) {
     header {

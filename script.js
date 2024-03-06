@@ -34,11 +34,23 @@ $(document).ready(() => {
     $("#menuBarContainer").click(() => {
         $("#sideNav").toggleClass("sideNavActive");
     });
-    
+
     // side nav close
     $("#menuCloseContainer").click(() => {
         $("#sideNav").toggleClass("sideNavActive");
     });
+
+    // quote generator Btn
+    $("#generatorBtn").click(() => {
+        $.get("https://api.quotable.io/quotes/random", (data, status) => {
+            // alert(status);
+            if (data[0].content) {
+                // add quote content to p tag
+                $("#quoteContent").text(`" ${data[0].content}"`);
+                $("#quoteAuthor").text(`~ ${data[0].author}`);
+            }
+        })
+    })
 
 })
 
