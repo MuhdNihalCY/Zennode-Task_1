@@ -1,4 +1,4 @@
-# Zennode-Task_1
+# Zennode-Task_1 ( Completed )
 
 Task 1 - 3 days
 Basics of HTML, CSS, Javascript and Jquery. ES6, -- completed
