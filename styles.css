@@ -1,9 +1,24 @@
+:root {
+    --main-bg-color: #0c151e;
+    --header-bg-color: #070c11;
+    --title-color: rgb(197, 202, 222);
+    --link-hover-color: rgb(173, 204, 232);
+    --footer-bg-color: #555;
+    --sidenav-bg-color: #111;
+    --text-color: whitesmoke;
+    --primary-btn-bg: rgb(113, 113, 113);
+    --primary-btn-border: gray;
+    --primary-btn-hover-bg: rgb(174, 174, 174);
+    --primary-btn-hover-color: rgb(55, 55, 55);
+    --footer-text-color: white;
+}
+
 * {
     margin: 0;
 }
 
 body {
-    background-color: #0c151e;
+    background-color: var(--main-bg-color);
     min-height: 100vh;
 }
 
@@ -18,7 +33,7 @@ header {
     justify-content: start;
     padding-left: 10%;
     align-items: center;
-    background-color: #070c11;
+    background-color: var(--header-bg-color);
 }
 
 .headerSub {
@@ -30,7 +45,7 @@ header {
 }
 
 .title {
-    color: rgb(197, 202, 222);
+    color: var(--title-color);
     font-weight: 600;
     font-size: 2rem;
 }
@@ -47,7 +62,7 @@ nav a {
 
 nav a:hover {
     text-decoration: none;
-    color: rgb(173, 204, 232);
+    color: var(--link-hover-color);
 }
 
 .menuContainer {
@@ -88,7 +103,7 @@ nav a:hover {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: var(--sidenav-bg-color);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -119,8 +134,9 @@ nav a:hover {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-top: 5rem;
+    justify-content: start;
+    padding-top: 4rem;
+    min-height: 65vh;
 }
 
 .newTask {
@@ -138,28 +154,35 @@ nav a:hover {
     border: 1px solid gray;
     width: 25%;
     font-size: 2rem;
-    color: whitesmoke;
+    color: var(--text-color);
     margin-right: 2rem;
 }
 
 #addTaskBtn {
     padding: .5rem 1rem;
-    background: rgb(113, 113, 113);
+    background: var(--primary-btn-bg);
     border-radius: 1rem;
     border: 2px solid gray;
     font-size: 18px;
     font-weight: 600;
-    color: whitesmoke;
-    transition: background .1s, color .1s, font-weight .5s;
+    /* color: var(--text-color); */
+    transition: background .5s, color .5s;
 }
 
 #addTaskBtn:hover {
-    background: rgb(174, 174, 174);
-    color: rgb(55, 55, 55);
+    background-color: var(--header-bg-color);
+    color: var(--footer-text-color);
+}
+
+.tasksHeading {
+    margin-top: 2rem;
+    color: rgb(191, 191, 191);
+    text-align: center;
+    text-decoration: underline;
 }
 
 .taskListDiv {
-    margin-top: 5rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -215,12 +238,22 @@ input [type="checkbox"] {
     justify-content: center;
     align-items: center;
     gap: 3rem;
+    min-height: 65vh;
 }
 
 #generatorBtn {
     max-width: 200px;
     padding: .5rem 1rem;
     font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color .5s, color .5s;
+    border: 1px solid gray;
+}
+
+#generatorBtn:hover {
+    background-color: var(--header-bg-color);
+    color: var(--footer-text-color);
 }
 
 .quoteTextArea {
@@ -233,7 +266,7 @@ input [type="checkbox"] {
 }
 
 .quoteTextArea p {
-    color: whitesmoke;
+    color: var(--text-color);
     font-size: 1.5rem;
 }
 
@@ -241,6 +274,70 @@ input [type="checkbox"] {
     font-size: 1rem;
     text-align: end;
     margin-left: 10rem;
+}
+
+/* footer */
+footer {
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: 1em 10rem;
+    background-color: var(--footer-bg-color);
+}
+
+footer h2 {
+    margin: 2rem 0;
+    white-space: nowrap;
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contactDetails,
+.footerLinks,
+.footerLocation {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.contactDetails p:first-child,
+.footerLinks p:first-child,
+.footerLocation p:first-child {
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 0.5rem;
+}
+
+.footerLinks a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--footer-text-color);
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.footerLinks a:hover {
+    color: #007BFF;
+}
+
+.footerIcons {
+    margin-right: 10px;
+}
+
+.footerIcons {
+    width: 20px;
+    height: 20px;
+}
+
+.footerBottomImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 3rem 0;
 }
 
 /* Responsive media query starts here */
@@ -269,5 +366,24 @@ input [type="checkbox"] {
     #newTaskInp {
         width: 80%;
         margin: 0;
+    }
+
+    footer {
+        color: var(--footer-text-color);
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .footerBottom {
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .contactDetails,
+    .footerLinks,
+    .footerLocation {
+        align-items: center;
     }
 }

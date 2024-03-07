@@ -46,7 +46,7 @@ $(document).ready(() => {
             // alert(status);
             if (data[0].content) {
                 // add quote content to p tag
-                $("#quoteContent").text(`" ${data[0].content}"`);
+                $("#quoteContent").text(`" ${data[0].content} "`);
                 $("#quoteAuthor").text(`~ ${data[0].author}`);
             }
         }).fail((error) => {
