@@ -1,42 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 1</title>
     <link rel="stylesheet" href="styles.css">
-
     <!-- jQuery import link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
 </head>
-
 <body>
+    <!-- header -->
     <header>
-        <!-- menu bar section -->
         <div class="menuContainer" id="menuBarContainer">
             <div class="menuBar1"></div>
             <div class="menuBar2"></div>
             <div class="menuBar3"></div>
         </div>
-
         <div class="headerSub">
             <div class="title">To-do List</div>
-
-            <!-- nav bar section -->
             <nav>
                 <a href="/index.html">To-do list</a>
                 <a href="/quote_generator.html">Quote generator</a>
             </nav>
-
         </div>
-
-
     </header>
     <!-- side nav -->
     <div id="sideNav" class="sideNav">
-        <!-- menu bar section -->
         <div class="menuContainer menuClose" id="menuCloseContainer">
             <div class="menuBar1"></div>
             <div class="menuBar2"></div>
@@ -45,51 +34,46 @@
         <a href="/index.html">To-do list</a>
         <a href="/quote_generator.html">Quote generator</a>
     </div>
+    <!--  main task section -->
+    <main>
+        <section class="taskSection">
+            <div class="newTask">
+                <input type="text" placeholder="Enter new task" id="newTaskInp">
+                <input type="button" id="addTaskBtn" value="Add task">
+            </div>
+            <h2 class="tasksHeading">Tasks:</h2>
+            <div class="taskListDiv">
+                <ul id="taskListParent">
 
-    <section class="taskSection">
-        <div class="newTask">
-            <input type="text" placeholder="Enter new task" id="newTaskInp">
-            <input type="button" id="addTaskBtn" value="Add task">
-        </div>
-
-        <!-- tasks list starts -->
-        <h2 class="tasksHeading">Tasks:</h2>
-        <div class="taskListDiv">
-            <ul id="taskListParent">
-
-            </ul>
-        </div>
-    </section>
-
+                </ul>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
     <footer>
         <h2>Task 1 - To do List</h2>
-
         <div class="footerBottom">
-            <div class="contactDetails">
-               <p class="contactHeader">Contact</p>
-               <p>Email: contact@example.com</p>
-               <p>Phone: +91 09876-54321</p>
-            </div>
-            <div class="footerLinks">
-                <p class="footerLinksHeader">Links</p>
-                <a href="/index.html"><img src="/images/icons8-todo-list-24.png" class="footerIcons" alt="todo-list-icon"> To-do list</a>
-                <a href="/quote_generator.html"><img src="/images/icons8-quote-24.png" class="footerIcons" alt=""> Quote generator</a> 
-            </div>
-            <div class="footerLocation">
-                <p class="locationHeader">Location</p>
-                <p>123 Main Street</p>
-                <p>City, State Country</p>
-            </div>
+            <ul class="contactDetails">
+                <li class="contactHeader">Contact</li>
+                <li>Email: contact@example.com</li>
+                <li>Phone: +91 09876-54321</li>
+            </ul>
+            
+            <ul class="footerLinks">
+                <li class="footerLinksHeader">Links</li>
+                <li><a href="/index.html"><img src="/images/icons8-todo-list-24.png" class="footerIcons" alt="todo-list-icon"> To-do list</a></li>
+                <li><a href="/quote_generator.html"><img src="/images/icons8-quote-24.png" class="footerIcons" alt=""> Quote generator</a></li>
+            </ul>
+            
+            <ul class="footerLocation">
+                <li class="locationHeader">Location</li>
+                <li>123 Main Street</li>
+                <li>City, State Country</li>
+            </ul>
         </div>
-        
-        <!-- footer image -->
         <img src="/images/compliant.png" class="footerBottomImg" alt="">
-
         <p>&copy; 2024 Zennode. All rights reserved.</p>
     </footer>
-
-
     <script src="script.js"></script>
 </body>
-
 </html>

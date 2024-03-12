@@ -13,18 +13,10 @@
     --footer-text-color: white;
 }
 
-* {
-    margin: 0;
-}
-
 body {
     background-color: var(--main-bg-color);
     min-height: 100vh;
-}
-
-ol,
-p {
-    padding: 0;
+    margin: 0;
 }
 
 header {
@@ -86,13 +78,12 @@ nav a:hover {
     transform: translate(0, 11px) rotate(-45deg);
 }
 
-.menuClose .menuBar2 {
-    opacity: 0;
-}
-
-/* making menu button to close button */
 .menuClose .menuBar3 {
     transform: translate(0, -11px) rotate(45deg);
+}
+
+.menuClose .menuBar2 {
+    opacity: 0;
 }
 
 /* side nav */
@@ -130,6 +121,7 @@ nav a:hover {
     margin-left: 2rem;
 }
 
+/* todo list */
 .taskSection {
     width: 100%;
     display: flex;
@@ -165,7 +157,6 @@ nav a:hover {
     border: 2px solid gray;
     font-size: 18px;
     font-weight: 600;
-    /* color: var(--text-color); */
     transition: background .5s, color .5s;
 }
 
@@ -182,7 +173,6 @@ nav a:hover {
 }
 
 .taskListDiv {
-    margin-top: 2rem;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -229,7 +219,7 @@ input [type="checkbox"] {
     padding: .5rem;
 }
 
-/* Quote generation Starts */
+/* Quote generation */
 .quoteGeneratorSection {
     margin-top: 3rem;
     width: 100%;
@@ -261,7 +251,6 @@ input [type="checkbox"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
     padding: 3rem;
 }
 
@@ -301,14 +290,21 @@ footer h2 {
     flex-direction: column;
     justify-content: start;
     align-items: start;
+    list-style-type: none;
 }
 
-.contactDetails p:first-child,
-.footerLinks p:first-child,
-.footerLocation p:first-child {
+.contactDetails li:first-child,
+.footerLinks li:first-child,
+.footerLocation li:first-child {
     font-weight: bold;
     text-decoration: underline;
     margin-bottom: 0.5rem;
+}
+
+.contactDetails li,
+.footerLinks li,
+.footerLocation li {
+    margin: 0.5rem 0;
 }
 
 .footerLinks a {
@@ -340,7 +336,7 @@ footer h2 {
     margin: 3rem 0;
 }
 
-/* Responsive media query starts here */
+/* Responsive media query */
 @media only screen and (max-width: 768px) {
     header {
         width: 90%;
@@ -367,10 +363,10 @@ footer h2 {
         width: 80%;
         margin: 0;
     }
+}
 
+@media only screen and (max-width: 900px) {
     footer {
-        color: var(--footer-text-color);
-        text-align: center;
         padding: 1rem;
     }
 

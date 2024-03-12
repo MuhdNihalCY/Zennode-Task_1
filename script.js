@@ -7,25 +7,16 @@ function addTaskToList(task) {
         task: task,
         Status: false // by default set the status to be not completed
     }
-
-    // push this task to list
     list.push(newTask)
-
-    // add new list
     addNewList(newTask)
 }
-
 
 $(document).ready(() => {
     // jQuery for add new task button click 
     $("#addTaskBtn").click(() => {
         const task = document.getElementById('newTaskInp').value.trim();
-
         if (task !== "") {
-            // function called to store the task
             addTaskToList(task)
-
-            // cleared task input tag
             document.getElementById('newTaskInp').value = "";
         }
     });
@@ -43,7 +34,6 @@ $(document).ready(() => {
     // quote generator  using ajax get method, using a third party api for quote generation.
     $("#generatorBtn").click(() => {
         $.get("https://api.quotable.io/quotes/random", (data, status) => {
-            // alert(status);
             if (data[0].content) {
                 // add quote content to p tag
                 $("#quoteContent").text(`" ${data[0].content} "`);
@@ -53,7 +43,6 @@ $(document).ready(() => {
             console.error('Error fetching quote:', error);
         });
     })
-
 })
 
 // function to add new task to to-do list
@@ -117,7 +106,6 @@ function deleteTask(listTag) {
 
     // remove the task from List
     var taskIndex = list.findIndex((eachList) => eachList.task === taskTitle);
-
     if (taskIndex !== -1) {
         // Remove the element at the found index
         list.splice(taskIndex, 1);
